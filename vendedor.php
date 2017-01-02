@@ -40,7 +40,7 @@
             var info = {"cod_vende": nome};
             $.ajax({
                 type: 'post',
-                url: 'categoria_vendedor/excluiVendedor.php',
+                url: 'vendedor/excluiVendedor.php',
                 data: info,
             }).done(function (data) {
                 Materialize.toast(data, 2000);

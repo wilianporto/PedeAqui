@@ -43,8 +43,7 @@ if ($banco) {
         }
         echo "<td>" . $row['cidade']. "-" . $row['estado'] . "</td>";
         echo "<td><a class=\"waves-effect red darken-1 btn\" onclick=\"exclui('" . $row['cod_vendedor'] . "')\">Exclui</a>&nbsp;&nbsp;&nbsp;";
-        echo "<a class=\"waves-effect blue lighten-1 btn modal-trigger\"
-              onclick=\"modalAltera('" . $row['cod_vendedor'] . "','" . $row['cod_telefone'] . "','" . $row['cod_cat_vendedor'] . "','" . $row['cod_endereco'] . "','" . $row['nome_vendedor'] . "','" . $row['descricao'] . "','" . $row['categoria_vendedor'] . "','" . $row['telefone'] . "','" . $row['situacao'] . "','" . $row['cidade'] . "','" . $row['estado'] . "')\" href=\"#modal1\">Altera</td>";
+        echo "<a class=\"waves-effect blue lighten-1 btn modal-trigger\" onclick=\"modalAltera('" . $row['cod_vendedor'] . "','" . $row['cod_telefone'] . "','" . $row['cod_cat_vendedor'] . "','" . $row['cod_endereco'] . "','" . $row['nome_vendedor'] . "','" . $row['descricao'] . "','" . $row['categoria_vendedor'] . "','" . $row['telefone'] . "','" . $row['situacao'] . "','" . $row['cidade'] . "','" . $row['estado'] . "')\" href=\"#modal1\">Altera</td>";
         echo "</tr>";
     }
     echo "</table>";

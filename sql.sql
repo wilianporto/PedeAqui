@@ -94,7 +94,7 @@ ON UPDATE NO ACTION;
 ALTER TABLE vendedor ADD CONSTRAINT telefone_vendedor_fk
 FOREIGN KEY (cod_telefone)
 REFERENCES telefone (cod_telefone)
-ON DELETE NO ACTION
+ON DELETE CASCADE
 ON UPDATE NO ACTION;
 
 ALTER TABLE vendedor ADD CONSTRAINT categoria_vendedor_vendedor_fk
@@ -103,10 +103,10 @@ REFERENCES categoria_vendedor (cod_cat_vendedor)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION;
 
-ALTER TABLE vendedor ADD CONSTRAINT endereço_empresa_fk
+ALTER TABLE vendedor ADD CONSTRAINT endereÃ§o_empresa_fk
 FOREIGN KEY (cod_endereco)
 REFERENCES endereco (cod_endereco)
-ON DELETE NO ACTION
+ON DELETE CASCADE
 ON UPDATE NO ACTION;
 
 ALTER TABLE cliente ADD CONSTRAINT endereco_cliente_fk
