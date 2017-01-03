@@ -13,12 +13,10 @@ $rua = $_POST['rua'];
 $numero = $_POST['numero'];
 $cidade = $_POST['cidade'];
 $estado = $_POST['estado']; 
-$cat_vend = $_POST['categ'];
 $senha = $_POST['senha'];
 $login = $_POST['login'];
-$tipo = 1;
+$tipo = 0;
 
-$situacao = $_POST['txtSituacao'] === 'true' ? 1 : 0;
 $query = "INSERT INTO telefone ( telefone ) VALUES ('$fone')";
 $insere = mysqli_query($link, $query);
 
@@ -39,14 +37,14 @@ if ($insere) {
     echo mysqli_error($link);
 }
 
-$query = "INSERT INTO vendedor ( nome_vendedor, cod_endereco, cnpj_cpf, situacao, cod_telefone, cod_cat_vendedor, tipo, login, senha) 
-          VALUES ('$nome', '$cod_retorno_end', '$documento', '$situacao', '$cod_retorno_tel', '$cat_vend', '$tipo', '$login', '$senha')";
+$query = "INSERT INTO cliente ( cod_endereco, nome_cliente, cnpj_cpf, cod_telefone, tipo, login, senha) 
+          VALUES ('$cod_retorno_end', '$nome', '$documento', '$cod_retorno_tel', '$tipo', '$login', '$senha')";
 
 $insere = mysqli_query($link, $query);
 
 if ($insere) {
     echo 'Cadatrado com Sucesso';
 } else {
-    echo "  cadastro vendedor  ";
+    echo "  cadastro cliente  ";
     echo mysqli_error($link);
 }

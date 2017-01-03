@@ -36,7 +36,11 @@ CREATE TABLE cliente (
                 cod_cliente INT AUTO_INCREMENT NOT NULL,
                 cod_endereco INT NOT NULL,
                 nome_cliente VARCHAR(50) NOT NULL,
+                cnpj_cpf VARCHAR(20) NOT NULL,
                 cod_telefone INT NOT NULL,
+                tipo INT NOT NULL,
+                login VARCHAR(30) NOT NULL,
+                senha VARCHAR(100) NOT NULL,
                 PRIMARY KEY (cod_cliente, cod_endereco)
 );
 
@@ -49,6 +53,7 @@ CREATE TABLE vendedor (
                 situacao BOOLEAN NOT NULL,
                 cod_telefone INT NOT NULL,
                 cod_cat_vendedor INT NOT NULL,
+                tipo INT NOT NULL,
                 login VARCHAR(30) NOT NULL,
                 senha VARCHAR(100) NOT NULL,
                 PRIMARY KEY (cod_vendedor)

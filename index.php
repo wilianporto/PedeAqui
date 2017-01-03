@@ -17,6 +17,7 @@
                 <li><a href="vendedor.php">Novo Vendedor</a></li>
                 <li><a href="categoria_vendedor.php">Nova categoria de vendedor</a></li>
                 <li><a href="categoria_produto.php">Nova categoria de produtos</a></li>
+                <li><a href="cliente.php">Cliente</a></li>
             </ul>
         </div>
     </nav>
